@@ -1,0 +1,53 @@
+<html t:type="layout" title="connaction-db com.example"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+<head>
+    <link rel="stylesheet" type="text/css" href="${context:mybootstrap/css/registeredusers.css}"/></head>
+<!--<div class="row">-->
+    <!--<div class="span4 offset3">-->
+
+        <div class="eg">
+            <h1>USERS </h1>
+            <table class="grid">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>User Name</th>
+                    <th>Group Name</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr t:type="Loop" t:source="usersList" t:value="users">
+                    <td>${users.userId}</td>
+                    <td>${users.userName}</td>
+                    <td>${users.userGroup}</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h1>ADMINS </h1>
+            <table class="grid">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>User Name</th>
+                    <th>Group Name</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr t:type="Loop" t:source="adminsList" t:value="users">
+                    <td>${users.userId}</td>
+                    <td>${users.userName}</td>
+                    <td>${users.userGroup}</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+    <!--</div>-->
+<!--</div>-->
+</html>
